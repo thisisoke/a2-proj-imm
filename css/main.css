@@ -12,3 +12,18 @@
 /* h1{
     element selector
 } */
+
+
+body { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+
+    font-size: 1.5em;
+
+}
+
+
+
