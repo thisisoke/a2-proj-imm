@@ -26,10 +26,8 @@ session_start();
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Import Font from Google fonts -->
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    </style>
+
+     <!-- Main Style sheet Font from Google fonts -->
      <link rel="stylesheet" href="css/main.css">
 </head>
 
