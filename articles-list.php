@@ -26,8 +26,6 @@ session_start();
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-
-     <!-- Main Style sheet Font from Google fonts -->
      <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -69,10 +67,11 @@ session_start();
 
         </ul>
     </div>
-
+    
+    <div class="welcomeDiv">
     <h1>Welcome <?php echo ($_SESSION["username"]) ?> to the IMM News Network</h1>
     <p> Welcome Paragraph: to the most trusted name in news </p>
-
+    </div>
 
     <?php
     //load in db-configuration file
@@ -118,6 +117,7 @@ session_start();
     //Industry Articles: 
     ?> 
     <hr>
+    <div id="articleCategory">
     <h1> Industry Articles: </h1>
     <div class="article-row">
     <?php
@@ -180,6 +180,7 @@ session_start();
 
     <!-- MAKE SURE EACH CATEGORY HAS 2 article entries -->
     </div>
+</div>
     <hr>
 
     <!-- Table Data  -->
@@ -211,6 +212,7 @@ session_start();
 
     <!-- Footer -->
     <footer>
+        <p>Copyright 2020</p>
         <p>Please Accept cookies for best usage of our website:</p>
         <p><a href="#">Accept Cookies</a></p>
     </footer>

@@ -42,7 +42,7 @@ if ($_SESSION["userType"] == 'admin') {
 
 
 <h2> <?php echo ($row["articleTitle"]); ?></h2>
-<h4> <?php echo ($row["articlePreview"]); ?></h4>
+<p class="previewText"> <?php echo ($row["articlePreview"]); ?></p>
 <p> Author: <?php echo ($row["articleAuthor"]); ?> </p>
 <p> <a href="article-page.php?articleId=<?php echo ($row["articleId"]); ?>">Read Full Article |</a><a href="<?php echo ($row["articleLink"]); ?>">  Orginal Article Link</a></p>
 <p> Category: <?php echo ($row["articleCategory"]); ?> </p>

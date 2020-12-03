@@ -24,6 +24,8 @@ session_start();
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -80,17 +82,19 @@ $displayArticle = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
+
 <h2> <?php echo ($displayArticle["articleTitle"]); ?></h2> 
-<h4> <?php echo ($displayArticle["articlePreview"]); ?></h4>
+<p class="previewText"> <?php echo ($displayArticle["articlePreview"]); ?></p>
 <p> Author: <?php echo ($displayArticle["articleAuthor"]); ?> </p>
 <p> <a href="<?php echo ($displayArticle["articleLink"]); ?>">  Orginal Article Link</a></p>
 <p> Category: <?php echo ($displayArticle["articleCategory"]); ?> </p>
 <p>Likes: <?php echo ($displayArticle["articleLikes"]); ?> </p>
 
 <!-- //Article Image and Text body -->
+<div class="article-page">
 <br><img src="<?php echo ($displayArticle["articleImage"]); ?>" alt="News Article" width="500"> <br> 
 <p> <?php echo ($displayArticle["articleText"]); ?> </p>
-
+</div>
 
 
 </body>
