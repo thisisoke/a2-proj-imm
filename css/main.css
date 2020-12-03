@@ -22,7 +22,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
-
+    color: white;
     background-color: grey;
     background-image: url("../assets/imm-news-network-010pattern.png");
     background-size: 100vw;
@@ -37,7 +37,63 @@ h1, h2, h3, h4, h5 {
 
 }
 
+/* unvisited link */
+a:link {
+    color: green;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }
 
+#navigation {
+    display: flex;
+    background-color: white;
+    justify-content: flex-start;
 
+}
+
+#navigation > ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#navigation ul li {
+    margin: 20px;
+    color: green;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+.article-row {
+    display: flex;
+    background-color: rgba(29, 29, 29, 0.836);
+    justify-content: flex-start;
+
+}
+
+.article-comp {
+
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px;
+    width: 500px;
+
+}
 
 

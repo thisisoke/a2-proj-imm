@@ -106,9 +106,10 @@ session_start();
 
         //Display Featured Article if the article row entry has a TRUE set in the featuredArticleFlag column
         if ($row["featuredArticleFlag"] == 1) {
-
+            ?> <div class="article-comp"> <?php
             //load in article display component
             include('includes/article-display-component.php');
+            ?> </div> <?php
         }    
         
     };
@@ -118,49 +119,55 @@ session_start();
     ?> 
     <hr>
     <h1> Industry Articles: </h1>
+    <div class="article-row">
     <?php
     while ($row = $stmt3->fetch(PDO::FETCH_ASSOC)) {
 
          //Display industry category
         if ($row["articleCategory"] == "industry" && $row["featuredArticleFlag"] == 0) {
-    
+            ?> <div class="article-comp"> <?php
             //load in article display component
             include('includes/article-display-component.php');
-            
+            ?> </div> <?php
         };  
         
     };
 
     //Technical Article: 
-    ?> 
+    ?>
+    </div> 
     <hr>
     <h1> Technical Articles: </h1>
+    <div class="article-row">
     <?php
     while ($row = $stmt2->fetch(PDO::FETCH_ASSOC)) {
 
         //Display of technical category
         if ($row["articleCategory"] == 'technical' && $row["featuredArticleFlag"] == 0) {
-
-    
+            ?> <div class="article-comp"> <?php
             //load in article display component
             include('includes/article-display-component.php');
+            ?> </div> <?php
         } ; 
         
     };
 
     //Career Article: 
     ?> 
+    </div>
     <hr>
     <h1> Career Articles: </h1>
+    <div class="article-row">
     <?php
     while ($row = $stmt1->fetch(PDO::FETCH_ASSOC)) {
 
         //Display of career category
         if ($row["articleCategory"] == 'career' && $row["featuredArticleFlag"] == 0) {
 
-    
+            ?> <div class="article-comp"> <?php
             //load in article display component
             include('includes/article-display-component.php');
+            ?> </div> <?php
         };  
         
     };
@@ -172,7 +179,7 @@ session_start();
 
 
     <!-- MAKE SURE EACH CATEGORY HAS 2 article entries -->
-
+    </div>
     <hr>
 
     <!-- Table Data  -->
