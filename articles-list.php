@@ -105,7 +105,7 @@ session_start();
 
         //Display Featured Article if the article row entry has a TRUE set in the featuredArticleFlag column
         if ($row["featuredArticleFlag"] == 1) {
-            ?> <div class="article-comp"> <?php
+            ?> <div id="featured" class="article-comp"> <?php
             //load in article display component
             include('includes/article-display-component.php');
             ?> </div> <?php
@@ -125,7 +125,7 @@ session_start();
 
          //Display industry category
         if ($row["articleCategory"] == "industry" && $row["featuredArticleFlag"] == 0) {
-            ?> <div class="article-comp"> <?php
+            ?> <div id="industry" class="article-comp"> <?php
             //load in article display component
             include('includes/article-display-component.php');
             ?> </div> <?php
@@ -144,7 +144,7 @@ session_start();
 
         //Display of technical category
         if ($row["articleCategory"] == 'technical' && $row["featuredArticleFlag"] == 0) {
-            ?> <div class="article-comp"> <?php
+            ?> <div id="technical" class="article-comp"> <?php
             //load in article display component
             include('includes/article-display-component.php');
             ?> </div> <?php
@@ -157,14 +157,14 @@ session_start();
     </div>
     <hr>
     <h1> Career Articles: </h1>
-    <div class="article-row">
+    <div class="article-row ">
     <?php
     while ($row = $stmt1->fetch(PDO::FETCH_ASSOC)) {
 
         //Display of career category
         if ($row["articleCategory"] == 'career' && $row["featuredArticleFlag"] == 0) {
 
-            ?> <div class="article-comp"> <?php
+            ?> <div id="career" class="article-comp "> <?php
             //load in article display component
             include('includes/article-display-component.php');
             ?> </div> <?php
